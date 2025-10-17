@@ -52,7 +52,15 @@
         }
     });
 
-    // Function to render stars based on rating
+    /**
+     * Render a star rating display string based on numerical rating.
+     * 
+     * Converts a numerical rating (0-5) into a visual star representation using
+     * full stars (★), half stars (½), and empty stars (☆).
+     * 
+     * @param rating - The numerical rating (0-5) or null for unrated games
+     * @returns String representation of the star rating or "Not yet rated" message
+     */
     function renderStarRating(rating: number | null): string {
         if (rating === null) return "Not yet rated";
         
