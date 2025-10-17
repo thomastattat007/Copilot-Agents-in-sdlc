@@ -29,11 +29,16 @@
   const menu = document.getElementById('menu');
   
   if (menuToggle && menu) {
+    /**
+     * Toggle the mobile navigation menu visibility
+     */
     menuToggle.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
     
-    // Close menu when clicking outside
+    /**
+     * Close the mobile navigation menu when clicking outside of it
+     */
     document.addEventListener('click', (event) => {
       const isClickInside = menuToggle.contains(event.target as Node) || menu.contains(event.target as Node);
       if (!isClickInside && !menu.classList.contains('hidden')) {
